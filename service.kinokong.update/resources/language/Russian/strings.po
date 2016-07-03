@@ -1,0 +1,111 @@
+# Kodi Media Center language file
+# Addon Name: Kinokong update
+# Addon id: service.kinokong.update
+# Addon Provider: Unfledged
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: silver-one@ya.ru\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "#62010"
+msgid "30 min"
+msgstr "30 мин."
+
+msgctxt "#62011"
+msgid "1 hour"
+msgstr "1 час"
+
+msgctxt "#62012"
+msgid "2 hour"
+msgstr "2 часа"
+
+msgctxt "#62013"
+msgid "3 hour"
+msgstr "3 часа"
+
+msgctxt "#62014"
+msgid "4 hour"
+msgstr "4 часа"
+
+msgctxt "#62015"
+msgid "5 hours"
+msgstr "5 часов"
+
+msgctxt "#62009"
+msgid "1 min"
+msgstr "1 минута"
+
+msgctxt "#62084"
+msgid "Enable update on start system"
+msgstr "Обновлять базу при запуске"
+
+msgctxt "#62083"
+msgid "Enable TV shows update"
+msgstr "Включить обновление ТВ передачь"
+
+msgctxt "#62082"
+msgid "Enable mult update"
+msgstr "Включить обновление мультфильмов"
+
+msgctxt "#62081"
+msgid "Enable TV sets update"
+msgstr "Включить обновление сериалов"
+
+msgctxt "#62080"
+msgid "Enable мovies update"
+msgstr "Включить обновление фильмов"
+
+msgctxt "#62091"
+msgid "Start KODI"
+msgstr "Действие при запуске медиацентра"
+
+msgctxt "#62092"
+msgid "Disabled component"
+msgstr "Категории"
+
+msgctxt "#62093"
+msgid "Interval to update"
+msgstr "Интервал обновления"
+
+msgctxt "#62094"
+msgid "Update base"
+msgstr "Обновление базы"
+
+msgctxt "#62090"
+msgid "Update base"
+msgstr "Обновить базу"
+
+msgctxt "#62085"
+msgid "Update base"
+msgstr "Обновить базу сейчас"
+
+msgctxt "#62095"
+msgid "Enable debug logging"
+msgstr "Включить отладку"
+
+msgctxt "#62096"
+msgid "Debugging"
+msgstr "Отладка"
+
+msgctxt "#62097"
+msgid "LoginPass"
+msgstr "Логин и пароль"
+
+msgctxt "#62098"
+msgid "Login"
+msgstr "Логин"
+
+msgctxt "#62099"
+msgid "Password"
+msgstr "Пароль"
+
+msgctxt "#62198"
+msgid "HelpText"
+msgstr "Логин и пароль для доступа к сайту kinokong.net"

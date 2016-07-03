@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.libkinokong"
+       name="libkinokong"
+       version="1.1.0"
+       provider-name="silver4one">
+  <requires>
+    <import addon="xbmc.python" version="2.7.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary lang="en"></summary>
+    <description lang="en"></description>
+    <disclaimer lang="en"></disclaimer>
+    <license>MIT License, Academic Free License v. 2.1</license>
+    <website></website>
+    <source></source>
+  </extension>
+</addon>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <category label="62094">															<!-- Обновление базы -->
+        <setting label="62093" type="labelenum" id="update_interval" lvalues="62009|62010|62011|62012|62013|62014|62015"/>
+		<setting label="62092" type="lsep"/>
+		<setting label="62080" type="bool" id="movies_enable" default="true"/>			<!-- Включить обновление фильмов -->
+		<setting label="62081" type="bool" id="serials_enable" default="true"/>			<!-- Включить обновление сериалов -->
+		<setting label="62082" type="bool" id="mult_enable" default="true"/>			<!-- Включить обновление мультфильмов -->
+		<setting label="62083" type="bool" id="shows_enable" default="true"/>			<!-- Включить обновление ТВ передачь -->
+		<setting label="62091" type="lsep"/>
+		<setting label="62084" type="bool" id="startsys_enable" default="true"/>		<!-- Обновлять базу при запуске-->
+		<setting label="62090" type="lsep"/>
+		<setting label="62085" type="action" action="RunScript(service.kinokong.update, downloadreport)"/>
+    </category>
+	<category label="62097"> 															<!-- Логин и пароль -->
+		<setting label="62198" type="lsep"/> 											<!-- Логин и пароль для доступа к сайту kinokong.net -->
+		<setting label="62098" id="login" type="text"  default=""/>						<!-- Логин -->
+		<setting label="62099" id="password" type="text"  option="hidden" default=""/>  <!-- Пароль -->
+	</category>
+	<category label="62096">															<!-- Отладка -->
+		<setting label="62095" type="bool" id="enable_logging" default="false"/>		<!-- Включить отладку -->	
+	</category>
+</settings>

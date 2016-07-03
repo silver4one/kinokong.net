@@ -1,0 +1,210 @@
+# SORT {DATE, YEAR, RATE} сортировка по дате, году или рэйтингу
+# D {=>, =<, =, >, <, <>, 1-12M} выборка по дате обновления больше равно, меньше равно, равно, больше, меньше, не равно формат даты ГГГГ-ММ-ДД 1-12M = установить откат на 1-12 месяцов для отбора новинок
+# Y {=>, =<, =, >, <, <>} выборка по году выпуска фильма больше равно, меньше равно, равно, больше, меньше, не равно формат ГГГГ
+# G выборка по жанру
+# T таблица бызы данных
+# BOOKMARK[тип] фуннкция для отоброжения записей из таблицы избранного
+# После символа @ следует mode id в скобках указан maxpage
+# Определенные таблицы:
+# ALL_TABLE    		= *all
+# MOVIES_TABLE 		= movies
+# TVSHOW_TABLE 		= tv_show
+# TVSETS_TABLE 		= tv_sets
+# MULT_TABLE   		= mult
+# BOOKMARK_TABLE 	= bookmark
+
+[Menu]
+	@new(4)
+	Новинки
+		D[>=3M]Y[>=2016]SORT[DATE]T[MOVIES_TABLE]
+	@films
+	Фильмы
+		@boevik
+		Боевики
+			G[Боевик]SORT[DATE]T[MOVIES_TABLE]
+		@vestern
+		Вестерн
+			G[Вестерн]SORT[DATE]T[MOVIES_TABLE]
+		@voenniu
+		Военный
+			G[Военный]SORT[DATE]T[MOVIES_TABLE]
+		@detectiv
+		Детектив
+			G[Детектив]SORT[DATE]T[MOVIES_TABLE]
+		@drama
+		Драма
+			G[Драма]SORT[DATE]T[MOVIES_TABLE]
+		@istory
+		Исторические
+			G[Исторические]SORT[DATE]T[MOVIES_TABLE]
+		@comedy
+		Комедия
+			G[Комедия]SORT[DATE]T[MOVIES_TABLE]
+		@criminal
+		Криминал
+			G[Криминал]SORT[DATE]T[MOVIES_TABLE]
+		@medrama
+		Мелодрама
+			G[Мелодрама]SORT[DATE]T[MOVIES_TABLE]
+		@russ
+		Русские
+			G[Русские]SORT[DATE]T[MOVIES_TABLE]
+		@priklichenia
+		Приключения
+			G[Приключения]SORT[DATE]T[MOVIES_TABLE]
+		@famaly
+		Семейный
+			G[Семейный]SORT[DATE]T[MOVIES_TABLE]
+		@triller
+		Триллер
+			G[Триллер]SORT[DATE]T[MOVIES_TABLE]
+		@ujasu
+		Ужасы
+			G[Ужасы]SORT[DATE]T[MOVIES_TABLE]
+		@fantasy
+		Фантастика
+			G[Фантастика]SORT[DATE]T[MOVIES_TABLE]
+		@fants
+		Фэнтези
+			G[Фэнтези]SORT[DATE]T[MOVIES_TABLE]
+		@year2014
+		2014
+			Y[=2014]SORT[DATE]T[MOVIES_TABLE]
+		@year2015
+		2015
+			Y[=2015]SORT[DATE]T[MOVIES_TABLE]
+		@year2016
+		2016
+			Y[=2016]SORT[DATE]T[MOVIES_TABLE]
+		@year2017
+		2017
+			Y[=2017]SORT[DATE]T[MOVIES_TABLE]
+	@serials
+	Сериалы
+		@new(4)
+		Новые
+			D[>=3M]Y[>=2016]SORT[DATE]T[TVSETS_TABLE]
+		@boevik
+		Боевики
+			G[Боевик]SORT[DATE]T[TVSETS_TABLE]
+		@voenniu
+		Военный
+			G[Военный]SORT[DATE]T[TVSETS_TABLE]
+		@detectiv
+		Детектив
+			G[Детектив]SORT[DATE]T[TVSETS_TABLE]
+		@drama
+		Драма
+			G[Драма]SORT[DATE]T[TVSETS_TABLE]
+		@istory
+		Исторические
+			G[Исторические]SORT[DATE]T[TVSETS_TABLE]
+		@comedy
+		Комедия
+			G[Комедия]SORT[DATE]T[TVSETS_TABLE]
+		@criminal
+		Криминал
+			G[Криминал]SORT[DATE]T[TVSETS_TABLE]
+		@medrama
+		Мелодрама
+			G[Мелодрама]SORT[DATE]T[TVSETS_TABLE]
+		@priklichenia
+		Приключения
+			G[Приключения]SORT[DATE]T[TVSETS_TABLE]
+		@triller
+		Триллер
+			G[Триллер]SORT[DATE]T[TVSETS_TABLE]
+		@ujasu
+		Ужасы
+			G[Ужасы]SORT[DATE]T[TVSETS_TABLE]
+		@fantasy
+		Фантастика
+			G[Фантастика]SORT[DATE]T[TVSETS_TABLE]
+		@all
+		Все
+			SORT[YEAR]T[TVSETS_TABLE]
+		@year2014
+		2014
+			Y[=2014]SORT[DATE]T[TVSETS_TABLE]
+		@year2015
+		2015
+			Y[=2015]SORT[DATE]T[TVSETS_TABLE]
+		@year2016
+		2016
+			Y[=2016]SORT[DATE]T[TVSETS_TABLE]
+		@year2017
+		2017
+			Y[=2017]SORT[DATE]T[TVSETS_TABLE]
+	@mult
+	Мультфильмы
+		SORT[DATE]T[MULT_TABLE]
+#	Аниме
+#		G[Аниме]
+	@peredachi
+	Передачи
+		SORT[DATE]T[TVSHOW_TABLE]
+	@top
+	Топ
+		@raiting
+		ПоРейтингу
+			SORT[RATE]T[MOVIES_TABLE]
+		@raiting2017(5)
+		ПоРейтингу2017
+			Y[=2017]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2016(5)
+		ПоРейтингу2016
+			Y[=2016]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2015(5)
+		ПоРейтингу2015
+			Y[=2015]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2014(5)
+		ПоРейтингу2014
+			Y[=2014]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2013(5)
+		ПоРейтингу2013
+			Y[=2013]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2012(5)
+		ПоРейтингу2012
+			Y[=2012]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2011(5)
+		ПоРейтингу2011
+			Y[=2011]SORT[RATE]T[MOVIES_TABLE]
+		@raiting2010(5)
+		ПоРейтингу2010
+			Y[=2010]SORT[RATE]T[MOVIES_TABLE]
+#		По Просмотрам
+#			G[ПоПросмотрам]
+#		По Коментариям
+#			G[ПоКоментариям]
+#		Кино подборка
+#			G[КиноПодборка]
+#		Новости кино
+#			G[НовостиКино]
+	@bookmark
+	Избранное
+		@bookfilms
+		Фильмы
+			BOOKMARK[BOOKMARK_VIEW1]
+		@bookserials
+		Сериалы
+			BOOKMARK[BOOKMARK_VIEW2]
+		@booktvshow
+		Передачи
+			BOOKMARK[BOOKMARK_VIEW3]
+	@search
+	Поиск
+		@all
+		Везде
+			FIND[ALL_TABLE]
+		@movies
+		Фильмов
+			FIND[MOVIES_TABLE]
+		@tvshows
+		Передачь
+			FIND[TVSHOW_TABLE]
+		@mult
+		Мультфильмов
+			FIND[MULT_TABLE]
+		@tvsets
+		Сериалов
+			FIND[TVSETS_TABLE]
