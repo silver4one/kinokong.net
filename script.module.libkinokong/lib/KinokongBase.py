@@ -288,7 +288,7 @@ class KinokongBase(AbstractBase):
 	
 	def _get_movie_file2(self, id):
 		if not self._cursor is None:
-			query = u"SELECT * FROM files WHERE hash='%s' ORDER BY type DESC LIMIT 1" %id
+			query = u"SELECT * FROM %s WHERE hash='%s' ORDER BY type DESC LIMIT 1" %(FILES_TABLE, id)
 			self._execute(True, query)
 			return self._cursor.fetchall()
 

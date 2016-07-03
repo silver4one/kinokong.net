@@ -129,9 +129,10 @@ class Parser(object):
 			min = int(re.search(u'(?P<hour>[0-9]{1,2}).(?P<min>[0-9]{2}).(?P<sec>[0-9]{2})', time).group('hour')) * 60
 			min = min + int(re.search(u'(?P<hour>[0-9]{1,2}).(?P<min>[0-9]{2})', time).group('min'))
 			normal_t = min
-		elif re.search(u'(?P<hour>[0-9]{1,2})[ ч| часа]+(?P<min>[0-9]{1,2})[ м]+', time):
-			min = int(re.search(u'(?P<hour>[0-9]{1,2})[ ч| часа]+(?P<min>[0-9]{1,2})[ м]+', time).group('hour')) * 60
-			min = min + int(re.search(u'(?P<hour>[0-9]{1,2})[ ч| часа]+(?P<min>[0-9]{1,2})[ м]+', time).group('min'))
+		# elif re.search(u'(?P<hour>[0-9]{1,2})[ ч| часа]+(?P<min>[0-9]{1,2})[ м]+', time):
+        elif re.search(u'(?P<hour>[0-9]{1,2}) *(ч|часа) *(?P<min>[0-9]{1,2}) *(м|минут) *?$', time):
+			min = int(re.search(u'(?P<hour>[0-9]{1,2}) *(ч|часа) *(?P<min>[0-9]{1,2}) *(м|минут) *?$', time).group('hour')) * 60
+			min = min + int(re.search(u'(?P<hour>[0-9]{1,2}) *(ч|часа) *(?P<min>[0-9]{1,2}) *(м|минут) *?$', time).group('min'))
 			normal_t = min
 		return normal_t
 	
